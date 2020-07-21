@@ -1,0 +1,48 @@
+.locations {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15px;
+    box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.06);
+}
+
+    .location {
+        padding: 30px 0 30px 47px;
+        display: flex;
+        position: relative;
+        cursor: pointer;
+        box-shadow: inset 0px -5px 0px -5px $red;
+        transition: 0.2s;
+
+        &:before {
+            content:'';
+            width: 32px;
+            height: 32px;
+            position: absolute;
+            top: calc(50% - 16px);
+            left: 0;
+            background-image: url(../img/marker.svg );
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+ 
+        &:hover {
+            box-shadow: inset 0px -7px 0px -5px $red;
+
+            &:before {
+                content:'';
+                width: 32px;
+                height: 32px;
+                position: absolute;
+                top: calc(50% - 16px);
+                left: 0;
+                background-image: url(../img/marker-active.svg );
+            }
+        }
+
+        &__address {
+            align-self: center;
+            font-size: 14px;
+            width: 165px;
+            line-height: 18px;
+        }
+    }

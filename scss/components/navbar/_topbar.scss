@@ -1,0 +1,143 @@
+.top-bar {
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.brand-name {
+    align-self: center;
+    display: flex;
+    &__logo {
+        display: flex;
+        margin-right: 22px;
+        
+        img {
+            align-self: center;
+            margin-right: 7px;
+            width: 44px;
+            height: auto;
+            &:hover {
+                animation: logoShake 1s;
+            }
+        }
+        p {
+            align-self: center;
+            color: $black;
+            font-size: 36px;
+            font-weight: 900;
+            text-transform: uppercase;
+            span {
+                color: $red;
+            }
+        }
+    }
+    &__subtitle {
+        align-self: center;
+        font-family: $play-font;
+        font-weight: 700;
+        font-size: 12px;
+        text-transform: uppercase;
+    }
+}
+
+.contacts {
+    display: flex;
+}
+
+.contact {
+    display: flex;
+    margin-right: 24px;
+    &:last-child {
+        margin-right: 0;
+    }
+    img {
+        align-self: center;
+        width: 20px;
+        height: auto;
+        margin-right: 10px;
+        animation: contactsShake 2s infinite;
+    }
+    p {
+        align-self: center;
+        color: $black;
+        font-family: $play-font;
+        font-size: 20px;
+    }
+}
+
+.call-buttons {
+    display: flex;
+    align-self: center;
+}
+
+.call-button {
+    align-self: center;
+    margin-right:8px;
+    width: 160px; 
+    height: min-content;
+    padding: 10px 20px;
+
+    &:last-child {
+        margin-right:0;
+        padding: 10px 31px;
+    }
+}
+
+
+@keyframes logoShake {
+  0% {
+    transform: translateX(0);
+  }
+
+  6.5% {
+    transform: translateX(-3px) rotateZ(-4deg);
+  }
+
+  18.5% {
+    transform: translateX(1.5px) rotateZ(2deg);
+  }
+
+  31.5% {
+    transform: translateX(-1.5px) rotateZ(-2deg);
+  }
+
+  43.5% {
+    transform: translateX(1px) rotateZ(2deg);
+  }
+
+  50% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes contactsShake {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  5%,
+  10% {
+    transform: scale3d(1, 1, 1) rotate3d(0, 0, 1, -3deg);
+  }
+
+  15%,
+  25%,
+  35%,
+  45% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+  }
+
+  20%,
+  30%,
+  40% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+  }
+
+  50% {
+    transform: scale3d(1, 1, 1);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}

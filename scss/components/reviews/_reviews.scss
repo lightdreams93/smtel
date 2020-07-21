@@ -1,0 +1,117 @@
+.reviews {
+    padding: 80px 0;
+    &__title {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    h2 {
+        align-self: center;
+    }
+
+    &__buttons {
+        align-self: center;
+
+        .btn {
+            margin-right: 15px;
+            &:last-child {
+                margin-right: 0;
+            }   
+        }
+    }
+    .reviews-list {
+        display: flex;
+        margin: 60px 0;
+        flex-wrap: wrap;
+
+        .review {
+            padding: 30px 30px 60px;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.12);
+            border-radius: 18px;
+            margin: 0 7.5px 15px 7.5px;
+            position: relative;
+            transition: 0.2s;
+            background-color: #fff;
+            cursor: pointer;
+
+            &:hover {
+                transform: scale(0.95);
+            }
+
+            &__header {
+                display: flex;
+            }
+            &__img {
+                align-self: center;
+                min-width: 40px;
+                border-radius: 50%;
+                overflow: hidden;
+                margin-right: 10px;
+            }   
+            &__data {
+                align-self: center;
+            }   
+            &__date {
+                font-size: 14px;
+                color: rgba(43, 43, 43, 0.54);
+            }
+            &__name {
+                font-size: 20px;
+                color: $black;
+                margin-bottom: 0;
+                font-weight: 700;
+            }
+
+            &__content {
+                padding-top: 45px;
+                position: relative;
+                &:before {
+                    content:'';
+                    width: 30px;
+                    height: 24px;
+                    position: absolute;
+                    top: 12px;
+                    left: 0;
+                    background-image: url(../img/brackets.svg);
+                }
+            }
+
+            &:after {
+                    content:'';
+                    width: 30px;
+                    height: 24px;
+                    position: absolute;
+                    bottom: 30px;
+                    right: 30px;
+                    background-image: url(../img/brackets.svg);
+                }
+        }
+
+        &.owl-carousel {
+            .owl-stage {
+                display: flex;
+            }
+            .owl-item { 
+                display: flex;
+                flex-grow: 1;
+                flex-shrink: 0;
+            
+            }
+            .owl-dots {
+                margin: 0 auto;
+                .owl-dot {
+                    width: 10px;
+                    height: 10px;
+                    background-color: #EEF0F2 !important;
+                    margin-left: 15px;
+                    border-radius: 50%;
+                    &.active {
+                        background-color: $black !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+

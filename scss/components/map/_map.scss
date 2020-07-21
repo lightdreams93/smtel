@@ -1,0 +1,71 @@
+.our-shops {
+    margin-bottom: 80px;
+    
+    h2 {
+        margin-bottom: 40px;
+    }
+    .map {
+        box-shadow: 0px 4px 35px rgba(0, 0, 0, 0.12);
+        border-radius: 18px;
+        overflow: hidden;
+        min-height: 578px;
+        &__info-panel { 
+            padding-left: 15px;
+            width: 336px;
+        
+            .location {
+                padding-bottom: 20px;
+                padding-top: 20px;
+                box-shadow: none;
+                &:hover {
+                    box-shadow: none;
+
+                    &:after {
+                        content:'';
+                        width: 2px;
+                        height: 100%;
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                        background-color: $red;
+                    }
+                }
+                
+                &__address {
+                    width: auto;
+                    padding-right: 15px;
+                }
+                &.active {
+                    position: relative; 
+
+                    .location__address {
+                        font-weight: 700;
+                    }
+                    &:after {
+                        content:'';
+                        width: 2px;
+                        height: 100%;
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                        background-color: $red;
+                    }
+                    &:before {
+                        content:'';
+                        width: 32px;
+                        height: 32px;
+                        position: absolute;
+                        top: calc(50% - 16px);
+                        left: 0;
+                        background-image: url(../img/marker-active.svg );
+                    }
+                }
+            }
+        }
+    }
+}
+
+.leaflet-control {
+    display: none;
+}
+

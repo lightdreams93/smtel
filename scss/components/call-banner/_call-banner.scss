@@ -1,0 +1,43 @@
+.call-banner {
+    max-width: 1360px;
+    height: 420px;
+    background-image: url(../img/call-banner.png);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+    &:before {
+        content:'';
+        position: absolute;
+        width: 826px;
+        height: 420px;
+        background-image: url(../img/banner-bg.png);
+        background-position: left;    
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+
+    &__content {
+        align-self: center;
+    }
+    &__title {
+        font-size: 48px !important;
+        line-height: 56px !important;
+        font-weight: 500 !important;
+        margin-bottom: 60px !important;
+        span {
+            font-weight: 900;
+            color: $red;
+        }
+    }
+
+    .call-checkbox {
+        margin-top: 30px;
+        width: 450px;
+        display: block;
+
+        input {
+            margin-right: 15px;
+        }
+    }
+}
