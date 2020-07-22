@@ -29,7 +29,19 @@ footer {
     }
 
     .footer-content {
+        padding-left: 15px;
+        padding-right: 15px;;
         justify-content: space-between;
+
+        @media screen and (max-width: 991px) {
+            display: block !important;
+        }
+
+        hr {
+            @media screen and (max-width: 991px) {
+                margin-bottom: 30px;
+            }   
+        }
 
         &__menu {
             li {
@@ -38,6 +50,9 @@ footer {
                     color: #fff;
                     font-weight: 700;
                     font-size: 18px;
+                    @media screen and (max-width: 1280px) {
+                        font-size: 16px;
+                    }
                 }
             }
             .sub-menu {
@@ -46,6 +61,9 @@ footer {
                     a {
                         font-size: 16px;
                         font-weight: 400;
+                         @media screen and (max-width: 1280px) {
+                            font-size: 14px;
+                        }
                     }
                 }
             }
@@ -61,6 +79,8 @@ footer {
     }
 
     .copyright {
+        padding-right: 15px;
+        padding-left: 15px;
         padding-top: 15px;
         display: flex;
         justify-content: space-between;
@@ -71,6 +91,10 @@ footer {
 
         .call-buttons {
             align-self: center;
+
+            @media screen and (max-width: 720px) {
+                display: none !important;
+            }
         }
 
         p {

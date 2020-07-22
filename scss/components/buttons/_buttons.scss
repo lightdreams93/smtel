@@ -9,6 +9,11 @@
     cursor: pointer;
     font-family: inherit;
 
+    @media screen and (max-width: 360px) {
+        font-size: 12px;
+        padding: 10px 15px;
+    }
+
     &--red {
         color: #fff;
         background-color: $red;

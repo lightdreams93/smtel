@@ -4,9 +4,28 @@
 
     &__title {
         justify-content: space-between;
-         
+        h2 {
+            @media screen and (max-width: 720px) {
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+
         a { 
             height: min-content;
+        }
+    }
+
+    &__all-btn {
+        @media screen and (max-width:720px) {
+            display: none;
+        }
+        &--mobile {
+            display: none;
+            margin: 30px auto 0;
+            @media screen and (max-width:720px) {
+                display: block;
+            }
         }
     }
 
@@ -22,6 +41,14 @@
             border: 1px solid rgba(0, 0, 0, 0.12);
             border-radius: 12px;
             display: flex;
+
+            @media screen and (max-width: 720px) {
+                flex-basis: calc(100%/3 - 15px);
+            }
+
+            @media screen and (max-width: 571px) {
+                flex-basis: calc(50% - 15px);
+            }
 
             &:hover {
                 .devices-list__img {

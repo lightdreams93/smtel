@@ -1,6 +1,9 @@
 .navbar {
     background-color: $black;
     min-height: 36px;
+    @media screen and (max-width: 1200px) {
+        display: none;
+    }
 
      ul {
         display: flex;

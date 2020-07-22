@@ -1,0 +1,21 @@
+.call-buttons {
+    display: flex;
+    align-self: center;
+}
+
+.call-button {
+    align-self: center;
+    margin-right:8px;
+    width: 160px; 
+    height: min-content;
+    padding: 10px 20px;
+
+    &:last-child {
+        margin-right:0;
+        padding: 10px 31px;
+    }
+
+    @media screen and (max-width: 720px) {
+      width: auto;
+    }
+}

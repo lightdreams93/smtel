@@ -18,3 +18,67 @@ input {
         border: 1px solid #C2C2C2;
     }
 }
+
+.horizontal-form {
+    display: flex;
+    position: relative;
+
+    @media screen and (max-width: 720px) {
+        display: block;
+    }
+    
+    &:before {
+        content:'';
+        position: absolute;
+        width: 22px;
+        height: 22px;
+        background-image: url(../img/phone-black.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        top: calc(50% - 11px);
+        left: 20px;
+        z-index: 1;
+        
+        @media screen and (max-width: 720px) {
+            top: 14px;
+        }
+    }
+
+    input {
+        align-self: center;
+        width: 385px;
+        padding-left: 60px;
+        border-bottom-right-radius: 0;
+        border-top-right-radius: 0;
+        position: relative;
+
+        @media screen and (max-width: 720px) {
+            margin-bottom: 15px;
+            width: 100%;
+            border-top-right-radius: 32px;
+            border-bottom-right-radius: 32px;
+
+            &:focus {
+                border-right: 1px solid #C2C2C2;;
+            }
+        }
+
+        &:focus {
+            border-right: none;
+        }
+    }
+    button {
+        align-self: center;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        padding: 17px 24px;
+
+        @media screen and (max-width: 720px) {
+            display: block;
+            width: 100%;
+            border-top-left-radius: 32px;
+            border-bottom-left-radius: 32px;
+        }
+    }
+}

@@ -4,21 +4,35 @@
     background-image: url(../img/call-banner.png);
     background-position: right;
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: cover;
+
+    @media screen and (max-width: 1360px) {
+         max-width: initial;
+         margin: 0 -15px;
+    }
 
     &:before {
         content:'';
         position: absolute;
-        width: 826px;
+        width: 60%;
         height: 420px;
         background-image: url(../img/banner-bg.png);
         background-position: left;    
         background-repeat: no-repeat;
         background-size: 100% 100%;
+        @media screen and (max-width: 720px) {
+            width: 100%;
+            background-image: none;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
     }
 
     &__content {
         align-self: center;
+        padding: 0 15px;
+        @media screen and (max-width: 720px) {
+            width: 100%;
+        }
     }
     &__title {
         font-size: 48px !important;
@@ -29,12 +43,24 @@
             font-weight: 900;
             color: $red;
         }
+
+        @media screen and (max-width: 720px) {
+            font-size: 30px !important;
+            line-height: 35px !important;
+            margin-bottom: 30px !important;
+            color: #fff;
+        }
     }
 
     .call-checkbox {
         margin-top: 30px;
-        width: 450px;
+        max-width: 450px;
         display: block;
+
+        @media screen and (max-width: 720px) {
+            font-size: 14px;
+            color: #fff;
+        }
 
         input {
             margin-right: 15px;

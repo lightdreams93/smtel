@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="assets/css/hamburger-min.css">
     <link rel="stylesheet" href="assets/css/main.min.css">
 </head>
 
@@ -19,14 +20,25 @@
         <nav>
             <div class="container">
                 <div class="top-bar">
-                    <div class="brand-name">
-                        <a href="#" class="brand-name__logo">
-                            <img src="assets/img/logo.svg" alt="">
-                            <p class="brand-name__title"><span>см</span>тел</p>
-                        </a>
-                        <div class="brand-name__subtitle">
-                            авторизованный<br>сервисный центр
+                    <div class="d-flex top-bar__logo">
+                        <button class="hamburger hamburger--collapse hamburger--black" type="button">
+                            <span class="hamburger-box">
+                                <span class="hamburger-inner hamburger-inner--black"></span>
+                            </span>
+                        </button>
+                        <div class="brand-name">
+                            <a href="#" class="brand-name__logo">
+                                <img src="assets/img/logo.svg" alt="">
+                                <p class="brand-name__title"><span>см</span>тел</p>
+                            </a>
+                            <div class="brand-name__subtitle">
+                                авторизованный<br>сервисный центр
+                            </div>
                         </div>
+                        <a href="tel:+7 (900) 915-02-97" class="contact">
+                            <img src="assets/img/phone-black.svg" alt="">
+                            <p>+7 (900) 915-02-97</p>
+                        </a>
                     </div>
                     <div class="contacts">
                         <a href="tel:+7 (900) 915-02-97" class="contact">
@@ -69,6 +81,7 @@
                         Ремонт телефонов <br> и планшетов
                     </h1>
                     <p class="header-subtitle">Наши мастера решат все проблемы вашего телефона или планшета</p>
+                    <a href="#" class="btn btn--red header-banner__mobile-btn">Отправить запрос на ремонт</a>
                     <form class="horizontal-form" action="">
                         <input type="tel" placeholder="Номер телефона">
                         <button class="btn btn--red" type="submit">Отправить запрос на ремонт</button>
@@ -354,7 +367,7 @@
         <div class="container">
             <div class="d-flex service-devices__title">
                 <h2>Мы обслуживаем технику:</h2>
-                <a href="#" class="btn btn--outline">Весь список техники</a>
+                <a href="#" class="btn btn--outline service-devices__all-btn">Весь список техники</a>
             </div>
             <div class="devices-list">
                 <div class="devices-list__device">
@@ -417,6 +430,7 @@
                         <img src="assets/img/logo-canon.svg" alt="">
                     </div>
                 </div>
+                <a href="#" class="btn btn--outline service-devices__all-btn--mobile">Весь список техники</a>
             </div>
         </div>
     </div>
@@ -606,6 +620,10 @@
                     </div>
                 </div>
             </div>
+            <div class="reviews__buttons reviews__buttons--mobile">
+                <a href="#" class="btn btn--outline">Все 24 отзыва</a>
+                <a href="#" class="btn btn--red">Написать отзыв</a>
+            </div>
         </div>
     </div>
     <div class="our-shops">
@@ -686,6 +704,7 @@
                     </a>
                 </div>
             </div>
+            <hr>
             <ul class="footer-content__menu">
                 <li><a href="#">Услуги</a></li>
                 <ul class="sub-menu">

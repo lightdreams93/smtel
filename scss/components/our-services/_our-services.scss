@@ -8,24 +8,32 @@
     margin: 0 -15px;
 
     &__title {
-        width: 996px;
+        max-width: 996px;
         font-size: 20px;
         line-height: 23px;
         text-align: center;
         padding-bottom: 50px;
         margin: 0 auto;
         color: #fff;
+        padding: 0 15px 50px;
     }
 
     &__list {
         display: flex;
         flex-wrap: wrap;
-        margin: 0 -30px;
     }
     &__item {
         display: flex;
-        flex-basis: calc(100% / 3 - 60px);
-        margin: 0 30px 60px;
+        flex-basis: calc(100% / 3 - 35px);
+        margin: 0 15px 60px;
+
+        @media screen and (max-width: 991px) {
+            flex-basis: calc(50% - 35px);
+        }
+
+        @media screen and (max-width: 571px) {
+            flex-basis: 100%;
+        }
     }
     &__img {
         min-width: 82px;

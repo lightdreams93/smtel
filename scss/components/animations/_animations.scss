@@ -1,0 +1,57 @@
+@keyframes logoShake {
+  0% {
+    transform: translateX(0);
+  }
+
+  6.5% {
+    transform: translateX(-3px) rotateZ(-4deg);
+  }
+
+  18.5% {
+    transform: translateX(1.5px) rotateZ(2deg);
+  }
+
+  31.5% {
+    transform: translateX(-1.5px) rotateZ(-2deg);
+  }
+
+  43.5% {
+    transform: translateX(1px) rotateZ(2deg);
+  }
+
+  50% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes contactsShake {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  5%,
+  10% {
+    transform: scale3d(1, 1, 1) rotate3d(0, 0, 1, -3deg);
+  }
+
+  15%,
+  25%,
+  35%,
+  45% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+  }
+
+  20%,
+  30%,
+  40% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+  }
+
+  50% {
+    transform: scale3d(1, 1, 1);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}

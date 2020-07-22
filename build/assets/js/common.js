@@ -1,7 +1,37 @@
 $(function () {
     var reviewsList = $('.reviews-list.owl-carousel').owlCarousel({
         items: 3,
-        dots: true
+        dots: true,
+        margin: 0,
+        responsive: {
+            1920: {
+                items: 3
+            },
+            1600: {
+                items: 3
+            },
+            1440: {
+                items: 3
+            },
+            1280: {
+                items: 3
+            },
+            991: {
+                items: 3
+            },
+            720: {
+                items: 2
+            },
+            440: {
+                items: 1
+            },
+            360: {
+                items: 1
+            },
+            0: {
+                items: 1
+            }
+        }
     });
     reviewsList.on('mousewheel', '.owl-stage', function (e) {
         if (e.deltaY > 0) {
@@ -14,12 +44,42 @@ $(function () {
 
 
     var citiesList = $('.locations.owl-carousel').owlCarousel({
-        items: 5,
+        items: 8,
         loop: true,
         dots: false,
         autoplay: true,
         autoplayTimeout: 2000,
-        autoplayHoverPause: true
+        autoplayHoverPause: true,
+        margin: 10,
+        responsive: {
+            1920: {
+                items: 8
+            },
+            1600: {
+                items: 7
+            },
+            1440: {
+                items: 6
+            },
+            1280: {
+                items: 5
+            },
+            991: {
+                items: 4
+            },
+            720: {
+                items: 3
+            },
+            440: {
+                items: 2
+            },
+            360: {
+                items: 1
+            },
+            0: {
+                items: 1
+            }
+        }
     });
     citiesList.on('mousewheel', '.owl-stage', function (e) {
         if (e.deltaY > 0) {
@@ -29,6 +89,12 @@ $(function () {
         }
         e.preventDefault();
     });
+
+    $('.hamburger').click(function (e) {
+        e.preventDefault();
+        $(this).toggleClass('is-active');
+    });
+
 
     if ($('#map').length != 0) {
         DG.then(function () {
