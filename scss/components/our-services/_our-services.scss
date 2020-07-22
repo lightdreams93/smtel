@@ -10,12 +10,12 @@
     &__title {
         max-width: 996px;
         font-size: 20px;
-        line-height: 23px;
+        line-height: 23px !important;
         text-align: center;
         padding-bottom: 50px;
         margin: 0 auto;
         color: #fff;
-        padding: 0 15px 50px;
+        padding: 0 15px 50px !important;
     }
 
     &__list {

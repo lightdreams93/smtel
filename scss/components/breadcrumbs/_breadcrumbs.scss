@@ -1,0 +1,28 @@
+.breadcrumb {
+    display: flex;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 0;
+    
+    .breadcrumb-item {
+        a {
+            color: rgba(43, 43, 43, 0.34);
+            text-decoration: underline;
+            font-size: 14px;
+        }
+
+        &:not(:first-child) {
+            &:before {
+                content: '/'; 
+                padding: 0 10px; 
+                font-size: 14px;
+                color: $black;
+            }
+        }
+        
+        &.active { 
+            font-size: 14px;
+            color: $black;
+        }
+    }
+}

@@ -38,7 +38,9 @@ footer {
         }
 
         hr {
+            display: none !important;
             @media screen and (max-width: 991px) {
+                display: block !important;
                 margin-bottom: 30px;
             }   
         }
