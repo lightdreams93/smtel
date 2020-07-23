@@ -1,0 +1,61 @@
+.modal {
+    width: 388px;
+    height: 360px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 34px rgba(0, 0, 0, 0.12);
+    border-radius: 18px;
+    padding: 30px;
+    &--page {
+        position: absolute;
+        top: 100px;
+        right: 0;
+        @media screen and (max-width: 870px) {
+            display: none;
+        }
+    }
+
+    &__title {
+        font-size: 22px;
+        line-height: 26px;
+        text-align: center;
+        font-weight: 700;
+        padding-bottom: 35px !important;
+    }
+
+    &__phone-icon {
+        margin-bottom: 20px;
+        position: relative;
+        input {
+            width: 100%;
+            padding-left: 60px;
+
+            &::placeholder {
+                padding-left: 45px;
+            }
+        }
+        &:before {
+            content:'';
+            position: absolute;
+            width: 22px;
+            height: 22px;
+            background-image: url(../img/phone-black.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            top: calc(50% - 11px);
+            left: 20px;
+            z-index: 1; 
+        }
+    }
+ 
+
+    input[type="checkbox"] {
+        align-self: flex-start;
+        margin-right: 15px;
+    }
+
+    &__btn {
+        margin-top: 15px;
+        width: 100%;
+    }
+}

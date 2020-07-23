@@ -95,7 +95,6 @@ $(function () {
         $(this).toggleClass('is-active');
     });
 
-
     if ($('#map').length != 0) {
         DG.then(function () {
             const data = [
@@ -160,4 +159,9 @@ $(function () {
             });
         });
     }
+
+    $('.faq-list').accordion({
+        heightStyle: 'content',
+        header: '> .faq-list__item > .faq-list__header'
+    });
 });

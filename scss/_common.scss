@@ -37,6 +37,10 @@ body {
         font-weight: 900;
         text-transform: uppercase;
         line-height: 63px;
+
+        @media screen and (max-width: 720px) {
+            font-size: 34px;
+        }
     }
 
     h2 {
@@ -76,7 +80,7 @@ body {
 
     ul {
         padding-top: 15px;
-        padding-bottom: 15px;
+        padding-bottom: 30px;
         margin-left: 40px;
         li {
             position: relative;
@@ -104,7 +108,7 @@ body {
     ol:not(.breadcrumb) {
         margin-left: 30px;
         padding-top: 15px;
-        padding-bottom: 15px;
+        padding-bottom: 30px;
         counter-reset: myCounter;
         li {
             list-style: none;
@@ -173,4 +177,7 @@ body {
 
 .w-50 {
     width: 50% !important;
+    @media screen and (max-width: 720px) {
+        width: 100% !important;
+    }
 }

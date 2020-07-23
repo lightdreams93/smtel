@@ -1,0 +1,45 @@
+.advantages {
+    padding-bottom: 30px;
+    &__title {
+        text-align: center;
+    }
+
+    .advantages-list {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 50px;
+
+        &__item {
+            margin: 0 15px 30px;
+            flex-basis: calc(20% - 30px);
+
+            @media screen and (max-width: 1080px) {
+                flex-basis: calc(25% - 30px);
+            }
+            @media screen and (max-width: 720px) {
+                flex-basis: calc(100%/3 - 30px);
+            }
+            @media screen and (max-width: 625px) {
+                flex-basis: calc(100%/2 - 30px);
+            }
+            @media screen and (max-width: 460px) {
+                flex-basis: 100%;
+            }
+        }
+
+        &__icon {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 15px;
+        }
+
+        &__text {
+            max-width: 210px;
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 23px;
+            text-align: center;
+            margin: 0 auto;
+        }
+    }
+}
