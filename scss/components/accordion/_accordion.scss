@@ -1,0 +1,72 @@
+.simple-accordion {
+    &__item {
+        cursor: pointer;
+        margin-bottom: 15px;
+        background: #FFFFFF;
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.12);
+        border-radius: 18px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__header {
+        padding: 30px 70px 30px 30px;
+        font-size: 20px;
+        line-height: 23px;
+        font-weight: 700;
+        position: relative;
+        @media screen and (max-width: 720px) {
+            font-size: 16px;
+            line-height: 18px;
+        }
+        @media screen and (max-width: 420px) {
+            padding: 30px;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    .ui-accordion-content {
+        padding: 0 30px 30px 30px;
+        @media screen and (max-width: 720px) {
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        @media screen and (max-width: 420px) {
+            padding: 0 30px 30px;
+        }
+    }
+
+    .ui-accordion-icons {
+        &:after {
+            content:'';
+            position: absolute;
+            top: calc(50% - 16px);
+            right: 30px;
+            width: 32px;
+            height: 32px;
+            background-image: url(../img/faq-disabled.svg);
+            @media screen and (max-width: 571px) {
+                background-image: none;
+            }
+        }
+    }
+
+     .ui-accordion-header-active {
+        &:after {
+            content:'';
+            position: absolute;
+            top: calc(50% - 16px);
+            right: 30px;
+            width: 32px;
+            height: 32px;
+            background-image: url(../img/faq-active.svg);
+            @media screen and (max-width: 571px) {
+                background-image: none;
+            }
+        }
+    }
+}

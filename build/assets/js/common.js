@@ -160,19 +160,9 @@ $(function () {
         });
     }
 
-    $('.faq-list').accordion({
+    $('.simple-accordion').accordion({
         heightStyle: 'content',
         collapsible: true,
-        header: '> .faq-list__item > .faq-list__header'
-    });
-    $('.device-list').accordion({
-        heightStyle: 'content',
-        collapsible: true,
-        header: '> .device-list__item > .device-list__header'
-    });
-    $('.device-list-inner').accordion({
-        heightStyle: 'content',
-        collapsible: true,
-        header: '> .device-list-inner__item > .device-list-inner__header'
+        header: '> .simple-accordion__item > .simple-accordion__header'
     });
 });

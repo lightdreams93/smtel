@@ -1,0 +1,44 @@
+.contact-list {
+
+    &__header {
+        padding: 30px 90px 30px 70px;
+    }
+
+    .ui-accordion-icons {
+        &:before {
+            content:'';
+            position: absolute;
+            left: 30px;
+            top: calc(50% - 12px);
+            width: 24px;
+            height: 24px;
+            background-image: url(../img/marker-active.svg);
+            background-size: contain;
+            background-position: center;
+            @media screen and (max-width: 420px) {
+                background-image: none;
+            }
+        }
+    }
+
+    &__contact-content {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__contact-item {
+        align-self: center;
+    }
+
+    &__city {
+        padding: 0 !important;
+    }
+    &__address {
+        font-size: 14px;
+        line-height: 16px;
+        text-decoration: underline;
+        padding: 0 !important;
+        font-weight: 400;
+    }
+}
+ 

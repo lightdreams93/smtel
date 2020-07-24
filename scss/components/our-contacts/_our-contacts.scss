@@ -1,0 +1,51 @@
+.our-contacts { 
+    display: flex;
+    flex-wrap: wrap;
+
+    .our-contact {
+        display: flex;
+        margin-right: 200px;
+        margin-bottom: 30px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        @media screen and (max-width: 571px) {
+            margin-right: 0;
+        }
+        
+        &__icon {
+            min-width: 120px;
+            margin-right: 30px;
+            align-self: center;
+
+            @media screen and (max-width:991px) {
+                min-width: initial;
+                width: 80px;
+            }
+
+            @media screen and (max-width: 571px) {
+                min-width: initial;
+                width: 50px;
+            }
+        }
+
+        &__content {
+            align-self: center;
+        }
+
+        &__title {
+            font-weight: 700;
+            @media screen and (max-width: 571px) {
+                padding-bottom: 0;
+            }
+        }
+
+        &__contact {
+            font-size: 22px;
+            font-weight: 900;
+            color: $black;
+        }
+    }
+}
