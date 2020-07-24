@@ -5,10 +5,10 @@
     background-position: right;
     background-repeat: no-repeat;
     background-size: cover;
+    margin: auto;
 
     @media screen and (max-width: 1360px) {
          max-width: initial;
-         margin: 0 -15px;
     }
 
     &:before {
@@ -29,7 +29,6 @@
 
     &__content {
         align-self: center;
-        padding: 0 15px;
         @media screen and (max-width: 720px) {
             width: 100%;
         }

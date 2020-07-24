@@ -12,10 +12,6 @@
 
 .header-content { 
     align-self: center;
-    @media screen and (max-width: 1215px) {
-        padding: 0 15px;
-    }
-    
     .header-title {
         color: #fff;
         font-weight: 900;
