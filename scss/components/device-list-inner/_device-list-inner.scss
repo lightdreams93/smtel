@@ -1,0 +1,72 @@
+.device-list-inner { 
+    
+    &__item {
+        cursor: pointer;
+        margin-bottom: 15px;
+        background: none;
+        box-shadow: none;
+        border-top: 1px solid #eee; 
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__header {
+        padding: 15px 120px 15px 30px;
+        font-size: 22px;
+        line-height: 26px;
+        font-weight: 900;
+        position: relative;
+        border-radius: 0 !important;
+        @media screen and (max-width: 720px) {
+            font-size: 16px;
+            line-height: 18px;
+        }
+    }
+
+    .ui-accordion-content {
+        padding: 0 30px 30px 45px;
+        background: rgba(43, 43, 43, 0.04);
+        border-radius: 0;
+        @media screen and (max-width: 720px) {
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        
+    }
+
+    .ui-accordion-icons {
+        &:after {
+            content:'Посмотреть';
+            position: absolute;
+            top: calc(50% - 16px);
+            right: 30px;
+            width: auto;
+            height: auto;
+            background-image: none;
+            font-size: 12px;
+            font-weight: 700;
+            color: $red;
+            text-decoration: underline;
+        }
+    }
+
+    .ui-accordion-header-active {
+        background: rgba(43, 43, 43, 0.04);
+        color: $black;
+        border-radius: 18px;
+
+        &:after {
+            content:'';
+            position: absolute;
+            top: calc(50% - 16px);
+            right: 30px;
+            width: 32px;
+            height: 32px;
+            background-image: url(../img/faq-active.svg);
+            @media screen and (max-width: 571px) {
+                background-image: none;
+            }
+        }
+    }
+}

@@ -164,4 +164,12 @@ $(function () {
         heightStyle: 'content',
         header: '> .faq-list__item > .faq-list__header'
     });
+    $('.device-list').accordion({
+        heightStyle: 'content',
+        header: '> .device-list__item > .device-list__header'
+    });
+    $('.device-list-inner').accordion({
+        heightStyle: 'content',
+        header: '> .device-list-inner__item > .device-list-inner__header'
+    });
 });

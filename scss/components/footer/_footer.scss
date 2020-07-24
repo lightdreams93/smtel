@@ -29,8 +29,10 @@ footer {
     }
 
     .footer-content {
-        padding-left: 15px;
-        padding-right: 15px;;
+        @media screen and (max-width: 1215px) {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
         justify-content: space-between;
 
         @media screen and (max-width: 991px) {
