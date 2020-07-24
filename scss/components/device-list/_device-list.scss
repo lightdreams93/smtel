@@ -13,7 +13,7 @@
     }
 
     &__header {
-        padding: 30px;
+        padding: 30px 70px 30px 30px;
         font-size: 26px;
         line-height: 31px;
         font-weight: 900;
@@ -22,6 +22,10 @@
         @media screen and (max-width: 720px) {
             font-size: 16px;
             line-height: 18px;
+            padding-right: 30px;
+        }
+        &:focus {
+            outline: none;
         }
     }
 
@@ -62,7 +66,7 @@
             right: 30px;
             width: 32px;
             height: 32px;
-            background-image: url(../img/faq-active.svg);
+            background-image: url(../img/faq-active-red.svg);
             @media screen and (max-width: 571px) {
                 background-image: none;
             }

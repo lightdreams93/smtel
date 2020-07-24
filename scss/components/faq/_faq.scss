@@ -24,6 +24,10 @@
         @media screen and (max-width: 420px) {
             padding: 30px;
         }
+
+        &:focus {
+            outline: none;
+        }
     }
 
     .ui-accordion-content {

@@ -1,56 +1,89 @@
-.prices {
-    .price-list {
-        &__item {
-            display: flex;
-            justify-content: space-between;
-            border-top: 1px solid #C5CCD2;
-            padding: 15px 0;
+.price-list {
 
-            &:last-child {
-                border-bottom: 1px solid #C5CCD2;
-            }
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        border-top: 1px solid #C5CCD2;
+        padding: 15px 0;
 
-            @media screen and (max-width: 720px) {
-                display: block;
-                padding-bottom: 30px;
-            }
-        }
-        &__service-name {
-            align-self: center;
-            font-size: 20px;
-            font-weight: 700;
-            padding: 0;
-            max-width: 50%;
-            line-height: 23px;
-            @media screen and (max-width: 720px) {
-                max-width: initial;
-            }
+        &:last-child {
+            border-bottom: 1px solid #C5CCD2;
         }
 
-        &__order {
-            @media screen and (max-width: 720px) {
-                display: block !important;
-            }
+        @media screen and (max-width: 720px) {
+            display: block;
+            padding-bottom: 30px;
+        }
+    }
+    &__service-name {
+        align-self: center;
+        font-size: 20px;
+        font-weight: 700;
+        padding: 0;
+        max-width: 50%;
+        line-height: 23px;
+        @media screen and (max-width: 720px) {
+            max-width: initial;
+        }
+    }
+
+    &__order {
+        @media screen and (max-width: 720px) {
+            display: block !important;
+        }
+    }
+
+    &__service-price {
+        font-size: 18px;
+        align-self: center;
+        padding: 0 !important;
+        font-weight: 700;
+        margin-right: 30px;
+        font-family: $play-font;
+
+        @media screen and (max-width: 720px) {
+            margin-bottom: 30px;
         }
 
-        &__service-price {
-            font-size: 18px;
-            align-self: center;
-            padding: 0;
-            font-weight: 700;
-            margin-right: 30px;
-            font-family: $play-font;
+        &--accent {
+            color: $red
+        }
+    }
+    &__order-btn {
+        align-self: center;
+    }
+
+    
+    &--inner {
+        .price-list__item {
+            padding: 0 0 15px !important;
+            border-top: none !important;
 
             @media screen and (max-width: 720px) {
                 margin-bottom: 30px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+            &:last-child {
+                border-bottom: none !important;
+            }
+            
+            .price-list__service-name {
+                @media screen and (max-width: 720px) {
+                    font-size: 18px;
+                }
             }
 
-            &--accent {
-                color: $red
+            .price-list__service-price {
+                @media screen and (max-width: 720px) {
+                    font-size: 16px;
+                }
             }
-        }
-        &__order-btn {
-            align-self: center;
+
+            .btn--outline {
+                background: none !important;
+            }
         }
     }
 }

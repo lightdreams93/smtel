@@ -162,14 +162,17 @@ $(function () {
 
     $('.faq-list').accordion({
         heightStyle: 'content',
+        collapsible: true,
         header: '> .faq-list__item > .faq-list__header'
     });
     $('.device-list').accordion({
         heightStyle: 'content',
+        collapsible: true,
         header: '> .device-list__item > .device-list__header'
     });
     $('.device-list-inner').accordion({
         heightStyle: 'content',
+        collapsible: true,
         header: '> .device-list-inner__item > .device-list-inner__header'
     });
 });

@@ -1,8 +1,7 @@
 .device-list-inner { 
-    
     &__item {
         cursor: pointer;
-        margin-bottom: 15px;
+        margin-bottom: 5px;
         background: none;
         box-shadow: none;
         border-top: 1px solid #eee; 
@@ -12,7 +11,7 @@
     }
 
     &__header {
-        padding: 15px 120px 15px 30px;
+        padding: 15px 180px 15px 30px;
         font-size: 22px;
         line-height: 26px;
         font-weight: 900;
@@ -21,6 +20,10 @@
         @media screen and (max-width: 720px) {
             font-size: 16px;
             line-height: 18px;
+            padding-right: 15px
+        }
+        &:focus {
+            outline: none;
         }
     }
 
@@ -37,17 +40,20 @@
 
     .ui-accordion-icons {
         &:after {
-            content:'Посмотреть';
+            content:'Показать цены';
             position: absolute;
             top: calc(50% - 16px);
             right: 30px;
             width: auto;
             height: auto;
             background-image: none;
-            font-size: 12px;
+            font-size: 16px;
             font-weight: 700;
             color: $red;
             text-decoration: underline;
+            @media screen and (max-width: 720px) {
+                display: none;
+            }
         }
     }
 
@@ -57,15 +63,19 @@
         border-radius: 18px;
 
         &:after {
-            content:'';
+            content:'Скрыть цены';
             position: absolute;
             top: calc(50% - 16px);
             right: 30px;
-            width: 32px;
-            height: 32px;
-            background-image: url(../img/faq-active.svg);
-            @media screen and (max-width: 571px) {
-                background-image: none;
+            width: auto;
+            height: auto;
+            background-image: none;
+            font-size: 16px;
+            font-weight: 700;
+            color: $red;
+            text-decoration: underline;
+            @media screen and (max-width: 720px) {
+                display: none;
             }
         }
     }

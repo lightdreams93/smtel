@@ -66,7 +66,10 @@
         @media screen and (max-width: 991px) {
             width: 102px;
             margin-bottom: 15px;
-        }   
+        }
+        &:hover {
+            animation: devicePulse 1s;
+        }
     }
 
     &__title {
