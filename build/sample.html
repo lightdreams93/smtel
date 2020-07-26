@@ -68,10 +68,10 @@
                         <li>
                             <a href="#">Услуги</a>
                             <ul class="submenu">
-                                <li><a href="#">Ремонт телефонов</a></li>
-                                <li><a href="#">Ремонт планшетов</a></li>
-                                <li><a href="#">Ремонт телевизоров</a></li>
-                                <li><a href="#">Ремонт ноутбуков</a></li>
+                                <li><a href="#1">Ремонт телефонов</a></li>
+                                <li><a href="#2">Ремонт планшетов</a></li>
+                                <li><a href="#3">Ремонт телевизоров</a></li>
+                                <li><a href="#4">Ремонт ноутбуков</a></li>
                             </ul>
                         </li>
                         <li><a href="#">О компании</a></li>
@@ -83,10 +83,10 @@
                         <li>
                             <a href="#">Контакты</a>
                             <ul class="submenu">
-                                <li><a href="#">Ремонт телефонов</a></li>
-                                <li><a href="#">Ремонт планшетов</a></li>
-                                <li><a href="#">Ремонт телевизоров</a></li>
-                                <li><a href="#">Ремонт ноутбуков</a></li>
+                                <li><a href="#1">Ремонт телефонов</a></li>
+                                <li><a href="#2">Ремонт планшетов</a></li>
+                                <li><a href="#3">Ремонт телевизоров</a></li>
+                                <li><a href="#4">Ремонт ноутбуков</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -234,9 +234,61 @@
                 <td>120,00</td>
             </tr>
         </table>
+        <section>
+            <h2>Кнопки</h2>
+            <div class="d-flex" style="width: 30%; justify-content: space-between;">
+                <a href="#" class="btn btn--red">Кнопка</a>
+                <a href="#" class="btn btn--black">Кнопка</a>
+                <a href="#" class="btn btn--outline">Кнопка</a>
+            </div>
+        </section>
+        <section>
+            <h2>Пагинация</h2>
+            <nav aria-label="Page navigation">
+                <ul class="pagination">
+                    <li class="page-item"><a class="page-link" href="#"></a></li>
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><span class="page-link">...</span></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#"></a></li>
+                </ul>
+            </nav>
+        </section>
     </div>
 </div>
 
+<div class="mobile-nav">
+    <nav>
+        <ul class="top-menu">
+            <li class="active"><a href="#">Каталог</a></li>
+            <li>
+                <a href="#">Услуги</a>
+                <ul class="submenu">
+                    <li><a href="#">Ремонт телефонов</a></li>
+                    <li><a href="#">Ремонт планшетов</a></li>
+                    <li><a href="#">Ремонт телевизоров</a></li>
+                    <li><a href="#">Ремонт ноутбуков</a></li>
+                </ul>
+            </li>
+            <li><a href="#">О компании</a></li>
+            <li><a href="#">Вопросы и ответы</a></li>
+            <li><a href="#">Сертификаты</a></li>
+            <li>
+                <a href="#">Партнерам</a>
+            </li>
+            <li>
+                <a href="#">Контакты</a>
+                <ul class="submenu">
+                    <li><a href="#">Ремонт телефонов</a></li>
+                    <li><a href="#">Ремонт планшетов</a></li>
+                    <li><a href="#">Ремонт телевизоров</a></li>
+                    <li><a href="#">Ремонт ноутбуков</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</div>
 <div class="modal" id="modal">
     <p class="modal__title">Запишитесь на бесплатную диагностику</p>
     <form action="">
@@ -252,6 +304,7 @@
         <button type="submit" class="btn btn--red modal__btn">Бесплатная диагностика</button>
     </form>
 </div>
+
 <footer>
     <div class="container">
         <div class="d-flex footer-content">
@@ -324,7 +377,7 @@
 <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 <script src="https://maps.api.2gis.ru/2.0/loader.js?pkg=full"></script>
 
-//Temp data
+<!-- Temp data -->
 <script src="assets/js/shop-data-min.js"></script>
 
 <script src="assets/js/common-min.js"></script>

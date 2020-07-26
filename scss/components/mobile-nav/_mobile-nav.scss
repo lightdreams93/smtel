@@ -1,0 +1,53 @@
+.mobile-nav {
+    display: none;
+    position: fixed;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100vh;
+    z-index: 4;
+    overflow: hidden;
+    nav {
+        padding-top: 15px;
+        position: relative;
+        background-color: $black;
+        margin-left: -300px;
+        width: 300px;
+        height: 100vh; 
+        overflow: scroll; 
+         li {
+            a { 
+                padding: 20px 23px;
+                color: #fff;
+                text-transform: uppercase;
+                font-weight: bold;
+                display: block; 
+            } 
+            &:hover {
+                background-color: $black;
+                cursor: pointer;
+                
+                a {
+                    color: #fff;
+                }	
+            }
+
+            .submenu {
+                li {
+                    padding-left: 15px;
+                    a {
+                        font-size: 16px;
+                        text-transform: initial;
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+
+        .active {
+            background-color: $black;
+            a {
+                color: #fff;
+            }
+        }
+    }
+}

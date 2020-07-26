@@ -1,0 +1,82 @@
+.pagination { 
+    margin: 0 0 30px !important;
+    display: flex; 
+
+    &--center {
+         justify-content: center; 
+    }
+
+    li {
+        &:before {
+            content:'';
+            background-image: none !important;
+        }
+    }
+    
+    .page-item {
+        &:first-child {
+            .page-link {
+                margin-left: 0;
+                margin-right: -1px;
+                width: 50px;
+                height: 40px;
+                background-image: url(../img/pagination-prev-disabled.svg);
+                background-size: contain;
+                background-position: center;
+                background-repeat: no-repeat;
+                &:hover {
+                    background-image: url(../img/pagination-next-enable.svg);
+                    transform: rotate(180deg);
+                }
+            }
+        }
+
+        &:last-child {
+            .page-link {
+                
+                margin-left: 0;
+                width: 50px;
+                height: 40px;
+                background-image: url(../img/pagination-prev-disabled.svg);
+                background-size: contain;
+                background-position: center;
+                background-repeat: no-repeat;
+                transform: rotate(180deg);
+               
+                &:hover {
+                    background-image: url(../img/pagination-next-enable.svg);
+                    transform: rotate(0deg);
+                }
+            }
+        }
+        .page-link {
+            position: relative;
+            display: block;
+            padding: .5rem .75rem;
+            margin-left: -1px;
+            font-size: 20px;
+            color: #ccc;
+            line-height: 1;
+            font-family: $play-font;
+            text-decoration: underline;
+        }
+    }
+    .disabled {
+        .page-link {
+            color: #6c757d;
+            pointer-events: none;
+            cursor: auto;
+            background-color: #fff;
+            border-color: #dee2e6;
+        }
+
+    }
+
+    .active {
+        .page-link { 
+            color: $black; 
+            font-weight: 700;
+            font-family: $play-font;
+        }
+    }
+}

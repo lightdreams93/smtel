@@ -93,6 +93,27 @@ $(function () {
     $('.hamburger').click(function (e) {
         e.preventDefault();
         $(this).toggleClass('is-active');
+        if ($(this).hasClass('is-active')) {
+            $('.mobile-nav').css({ "display": "block" });
+            $('.mobile-nav nav').animate({
+                "margin-left": "0"
+            }, 500);
+            $('.wrapper').css({ "overflow": "hidden" });
+            $('body').css({ "overflow": "hidden" });
+        }
+    });
+
+    $('.mobile-nav').click(function (e) {
+        if ($('.hamburger').hasClass('is-active')) {
+            $('.mobile-nav nav').animate({
+                "margin-left": "-300px"
+            }, 500, function () {
+                $('.mobile-nav').css({ "display": "none" });
+            });
+            $('.wrapper').css({ "overflow": "auto" });
+            $('body').css({ "overflow": "auto" });
+            $('.hamburger').removeClass('is-active');
+        }
     });
 
 
