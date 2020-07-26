@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
     <link rel="stylesheet" href="assets/css/hamburger-min.css">
     <link rel="stylesheet" href="assets/css/main.min.css">
 </head>
@@ -50,10 +51,10 @@
                             <p>info@smtel29.ru</p>
                         </a>
                         <div class="call-buttons">
-                            <a href="#" class="btn btn--outline call-button">
+                            <a data-fancybox data-src="#modal" href="javascript:;" class="btn btn--outline call-button">
                                 Бесплатный вызов мастера
                             </a>
-                            <a href="#" class="btn btn--red call-button">
+                            <a data-fancybox data-src="#modal" href="javascript:;" class="btn btn--red call-button">
                                 Записаться на ремонт
                             </a>
                         </div>
@@ -62,14 +63,32 @@
             </div>
             <div class="navbar">
                 <div class="container">
-                    <ul>
+                    <ul class="top-menu">
                         <li class="active"><a href="#">Каталог</a></li>
-                        <li><a href="#">Услуги</a></li>
+                        <li>
+                            <a href="#">Услуги</a>
+                            <ul class="submenu">
+                                <li><a href="#">Ремонт телефонов</a></li>
+                                <li><a href="#">Ремонт планшетов</a></li>
+                                <li><a href="#">Ремонт телевизоров</a></li>
+                                <li><a href="#">Ремонт ноутбуков</a></li>
+                            </ul>
+                        </li>
                         <li><a href="#">О компании</a></li>
                         <li><a href="#">Вопросы и ответы</a></li>
                         <li><a href="#">Сертификаты</a></li>
-                        <li><a href="#">Партнерам</a></li>
-                        <li><a href="#">Контакты</a></li>
+                        <li>
+                            <a href="#">Партнерам</a>
+                        </li>
+                        <li>
+                            <a href="#">Контакты</a>
+                            <ul class="submenu">
+                                <li><a href="#">Ремонт телефонов</a></li>
+                                <li><a href="#">Ремонт планшетов</a></li>
+                                <li><a href="#">Ремонт телевизоров</a></li>
+                                <li><a href="#">Ремонт ноутбуков</a></li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -218,6 +237,21 @@
     </div>
 </div>
 
+<div class="modal" id="modal">
+    <p class="modal__title">Запишитесь на бесплатную диагностику</p>
+    <form action="">
+        <div class="modal__phone-icon">
+            <input type="tel" placeholder="Номер телефона">
+        </div>
+        <div class="d-flex">
+            <input type="checkbox" id="modal-checkbox">
+            <label for="modal-checkbox">Мы никому не сообщим ваш номер телефона, потому что вы согласны с <a
+                    href="">Политикой
+                    конфиденциальности</a></label>
+        </div>
+        <button type="submit" class="btn btn--red modal__btn">Бесплатная диагностика</button>
+    </form>
+</div>
 <footer>
     <div class="container">
         <div class="d-flex footer-content">
@@ -272,10 +306,10 @@
                 <p>Условия продажи и политика обработки персональных данных</p>
             </div>
             <div class="call-buttons">
-                <a href="#" class="btn btn--outline call-button">
+                <a data-fancybox data-src="#modal" href="javascript:;" class="btn btn--outline call-button">
                     Бесплатный вызов мастера
                 </a>
-                <a href="#" class="btn btn--red call-button">
+                <a data-fancybox data-src="#modal" href="javascript:;" class="btn btn--red call-button">
                     Записаться на ремонт
                 </a>
             </div>
@@ -287,7 +321,12 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 <script src="https://maps.api.2gis.ru/2.0/loader.js?pkg=full"></script>
+
+//Temp data
+<script src="assets/js/shop-data-min.js"></script>
+
 <script src="assets/js/common-min.js"></script>
 </body>
 

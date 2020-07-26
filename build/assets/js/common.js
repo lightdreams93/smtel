@@ -95,47 +95,23 @@ $(function () {
         $(this).toggleClass('is-active');
     });
 
+
+    $('.simple-accordion').accordion({
+        heightStyle: 'content',
+        collapsible: true,
+        header: '> .simple-accordion__item > .simple-accordion__header',
+        activate: function (e, ui) {
+            accordionsMaps.forEach(element => {
+                //Refresh maps
+                element.invalidateSize();
+            });
+        }
+    });
+
+    const data = shopData;
+
     if ($('#map').length != 0) {
         DG.then(function () {
-            const data = [
-                {
-                    address: 'СМТЕЛ-Архангельск, Архангельск, Площадь Ленина, 4, 16 этаж',
-                    position: [64.538600, 40.518259]
-                },
-                {
-                    address: 'Евросервис, г. Архангельск, ул. Урицкого, 43',
-                    position: [64.536465, 40.565696]
-                },
-                {
-                    address: 'Коноша - Мегафон, пгт. Коноша, пр. Октябрьский, 16',
-                    position: [60.973160, 40.255238]
-                },
-                {
-                    address: 'Шенкурск, г. Шенкурск, Кудрявцева, 38',
-                    position: [62.104425, 42.901652]
-                },
-                {
-                    address: 'Троицкий, г. Архангельск, пр. Троицкий 121/1',
-                    position: [64.555690, 40.522167]
-                },
-                {
-                    address: 'Полюс, г. Архангельск, ул. Тимме 4',
-                    position: [64.542057, 40.570305]
-                },
-                {
-                    address: 'Сульфат, г. Архангельск, ул. Химиков, 6',
-                    position: [64.597951, 40.596287]
-                },
-                {
-                    address: 'Северодвинска - Теле 2, г. Северодвинск, ул. Ленина, 35/37',
-                    position: [64.557890, 39.830691]
-                },
-                {
-                    address: 'СМТЕЛ-Северодвинск, г. Севродвинск, ул. Ленина, 16',
-                    position: [64.562520, 39.825507]
-                }
-            ]
-
             var map;
 
             var prevNum = 0;
@@ -160,9 +136,24 @@ $(function () {
         });
     }
 
-    $('.simple-accordion').accordion({
-        heightStyle: 'content',
-        collapsible: true,
-        header: '> .simple-accordion__item > .simple-accordion__header'
+    var accordionsMaps = [];
+
+    DG.then(function () {
+        data.forEach((element, index) => {
+            if ($('#map-' + index).length != 0) {
+                var accordionMap;
+
+                accordionMap = DG.map('map-' + index, {
+                    center: element.position,
+                    zoom: 17
+                });
+
+                DG.marker(element.position).addTo(accordionMap);
+
+                accordionsMaps.push(accordionMap);
+            }
+        });
     });
+
+
 });

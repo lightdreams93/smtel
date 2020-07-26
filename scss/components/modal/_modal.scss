@@ -1,12 +1,20 @@
 .modal {
     width: 388px;
-    height: 360px;
+    height: 348px;
     background: #FFFFFF;
     box-shadow: 0px 4px 34px rgba(0, 0, 0, 0.12);
     border-radius: 18px;
     padding: 30px;
+    display: none;
+
+    @media screen and (max-width: 340px) {
+        padding: 15px;
+    }
+ 
     &--page {
+        display: block;
         position: absolute;
+        height: 360px !important;
         top: 100px;
         right: 0;
         @media screen and (max-width: 870px) {

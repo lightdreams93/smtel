@@ -2,6 +2,14 @@
 
     &__header {
         padding: 30px 90px 30px 70px;
+
+        @media screen and (max-width: 1080px) {
+            padding-left: 30px;
+        }
+
+        @media screen and (max-width: 571px) {
+            padding-right: 30px;
+        }
     }
 
     .ui-accordion-icons {
@@ -15,8 +23,43 @@
             background-image: url(../img/marker-active.svg);
             background-size: contain;
             background-position: center;
-            @media screen and (max-width: 420px) {
+
+
+            @media screen and (max-width: 1080px) {
                 background-image: none;
+            }
+        }
+    }
+
+    .ui-accordion-header-active {
+
+        .contact-list__contact-item {
+            @media screen and (max-width: 1080px) {
+                margin-bottom: 30px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        .contact-list__phone {
+            display: flex;
+        }
+
+        .contact-list__email {
+            display: flex;
+        }
+
+        .contact-list__work-time {
+            display: flex;
+        }
+
+        .contact-list__icon {
+            display: flex;
+
+            @media screen and (max-width: 1080px) {
+                display: none;
             }
         }
     }
@@ -24,6 +67,10 @@
     &__contact-content {
         display: flex;
         justify-content: space-between;
+
+        @media screen and (max-width: 991px) {
+            display: block;
+        }
     }
 
     &__contact-item {
@@ -39,6 +86,62 @@
         text-decoration: underline;
         padding: 0 !important;
         font-weight: 400;
+    }
+
+    &__phone {
+        display: flex;
+
+        @media screen and (max-width: 1080px) {
+            display: none;
+        }
+    }
+
+    &__email {
+        display: flex;
+        @media screen and (max-width: 1080px) {
+            display: none;
+        }
+    }
+
+    &__work-time {
+        display: flex;
+        @media screen and (max-width: 1080px) {
+            display: none;
+        }
+    }
+
+    &__icon {
+        display: none;
+        width: 18px;
+        height: 18px;
+        margin-right: 15px;
+        align-self: center;
+    }
+
+    &__phone-link {
+        font-size: 20px;
+        line-height: 23px;
+        text-align: right;
+        color: $black;
+
+        @media screen and (max-width: 720px) {
+            font-size: 16px;
+        }
+    }
+
+    &__email-link {
+        color: $black;
+        font-size: 16px;
+        
+        @media screen and (max-width: 720px) {
+            font-size: 14px;
+        }
+    }
+
+    &__work-time-text {
+        font-size: 14px;
+        font-weight: 400;
+        padding: 0 !important;
     }
 }
  
